@@ -1,8 +1,8 @@
-const express = require("express");
-const cors = require("cors");
+import express, { json } from "express";
+import cors from "cors";
 
 const app = express();
-app.use(express.json());
+app.use(json());
 app.use(cors({ origin: true }));
 
 app.post("/authenticate", async (req, res) => {
